@@ -504,3 +504,100 @@ footer a {
     padding: 8px 0;
     border-bottom: 1px solid #222;
 }
+.user-box {
+    position: relative;
+    margin-left: auto;
+}
+
+.user-button {
+    background: #111;
+    color: white;
+    border: 1px solid #ff1744;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.user-button:hover {
+    background: #ff1744;
+}
+
+.user-popup {
+    position: absolute;
+    right: 0;
+    top: 48px;
+    width: 280px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+    display: none;
+    z-index: 9999;
+}
+
+.user-popup.show {
+    display: block;
+}
+
+.user-avatar {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background: #ff1744;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.user-name {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.user-rank {
+    text-align: center;
+    color: #ff1744;
+    margin: 5px 0 15px;
+}
+
+.user-info {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+}
+
+.user-info p {
+    margin: 8px 0;
+    color: #ccc;
+}
+
+.user-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.user-actions a,
+.user-actions button {
+    text-decoration: none;
+    text-align: center;
+    background: #1b1b1b;
+    color: white;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-actions a:hover,
+.user-actions button:hover {
+    background: #ff1744;
+    border-color: #ff1744;
+}
