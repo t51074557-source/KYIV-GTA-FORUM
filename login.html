@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KYIV GTA — Вхід</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <span>KYIV</span> GTA
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Форум
+        </a>
+
+        <a href="register.html">
+            Реєстрація
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <div class="form-box">
+
+        <h1>ВХІД</h1>
+
+        <p>
+            Увійдіть до свого акаунта KYIV GTA
+        </p>
+
+
+        <form id="loginForm">
+
+            <input
+                id="login"
+                type="text"
+                placeholder="Нікнейм або Email"
+                autocomplete="username"
+                required
+            >
+
+
+            <input
+                id="password"
+                type="password"
+                placeholder="Пароль"
+                autocomplete="current-password"
+                required
+            >
+
+
+            <div id="msg"></div>
+
+
+            <button
+                type="submit"
+                class="action">
+
+                УВІЙТИ
+
+            </button>
+
+        </form>
+
+
+        <p>
+
+            Немає акаунта?
+
+            <a href="register.html">
+                Зареєструватися
+            </a>
+
+        </p>
+
+    </div>
+
+</main>
+
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>

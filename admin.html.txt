@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KYIV GTA — Адмін-панель</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <span>KYIV</span> GTA
+    </div>
+
+    <nav>
+        <a href="index.html">Форум</a>
+        <a href="profile.html">Профіль</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <div class="form-box wide">
+
+        <h1>АДМІН-ПАНЕЛЬ</h1>
+
+        <p>
+            Керування форумом KYIV GTA
+        </p>
+
+
+        <button
+            class="action"
+            onclick="showUsers()">
+
+            ПЕРЕГЛЯНУТИ КОРИСТУВАЧІВ
+
+        </button>
+
+
+        <button
+            class="action"
+            onclick="clearTopics()">
+
+            ВИДАЛИТИ ВСІ ТЕМИ
+
+        </button>
+
+
+        <div id="admin-content"></div>
+
+    </div>
+
+</main>
+
+
+<script>
+
+function showUsers() {
+
+    const users =
+        JSON.parse(
+            localStorage.getItem("KYIV_GTA_FORUM_USERS")
+            || "[]"
+        );
+
+    const box =
+        document.getElementById("admin-content");
+
+    box.innerHTML =
+        "<h2>Користувачі</h2>" +
+
+        users.map(u => `
+
+            <div class="post">
+
+                <div class="post-body">
+
+                    <b>${u.username}</b>
+
+                    <br>
+
+                    ${u.email}
+
+                    <br>
+
+                    Ранг: ${u.rank}
+
+                </div>
+
+            </div>
+
+        `).join("");
+}
+
+
+function clearTopics() {
+
+    if (!confirm("Видалити всі теми?")) {
+        return;
+    }
+
+    localStorage.removeItem(
+        "KYIV_GTA_FORUM_TOPICS"
+    );
+
+    alert("Теми видалено.");
+
+    location.reload();
+}
+
+</script>
+
+</body>
+</html>

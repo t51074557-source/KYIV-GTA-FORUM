@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KYIV GTA — Нова тема</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <span>KYIV</span> GTA
+    </div>
+
+    <nav>
+        <a href="index.html">Форум</a>
+        <a href="profile.html">Профіль</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <div class="form-box wide">
+
+        <h1>СТВОРИТИ ТЕМУ</h1>
+
+
+        <select id="category">
+
+            <option>Новини KYIV GTA</option>
+            <option>Правила проекту</option>
+            <option>Адміністрація</option>
+            <option>Фракції</option>
+            <option>Загальний чат</option>
+            <option>Пропозиції</option>
+            <option>Скарги</option>
+            <option>Заявки</option>
+            <option>Баги та помилки</option>
+            <option>Допомога по грі</option>
+
+        </select>
+
+
+        <input
+            id="title"
+            type="text"
+            placeholder="Назва теми">
+
+
+        <textarea
+            id="text"
+            placeholder="Текст теми">
+        </textarea>
+
+
+        <div id="msg"></div>
+
+
+        <button
+            class="action"
+            onclick="createTopic()">
+
+            СТВОРИТИ ТЕМУ
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<script src="js/forum.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>
